@@ -72,13 +72,14 @@ footer {
 }
 #centera{
     width: 25%;
+    background-image: ;
 }
 #centerb{
     width: 50%;
     color: black;
-    padding: 15px;
-    border:1px solid rgb(110, 102, 102)
-    
+    padding: 10px;
+    border:1px solid rgba(110, 102, 102, 0.327);
+    stroke-width: 30px;
 }
 #centerc{
     width: 25%;
@@ -87,15 +88,9 @@ footer {
     border: 1px solid gray;
     padding: 20px;
     border-radius: 4px;
-   
+   margin-bottom: 4px;
 }
-#feed{
-    padding: 5px;
-    width: ;
-    height: 200px;
-    border:0.5 solid rgb(29, 7, 7);
-    border-radius: 5px;
-}
+
 #post input{
     width: 97%;
     padding: 10px;
@@ -113,6 +108,13 @@ color: black;
  font-size: 20px;
     color:black;
     justify-content: space-around;
+}
+#feed{
+    padding: 3px;
+    
+    height: 380px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
 }
 
 
@@ -140,6 +142,11 @@ a{
     font-size: 20px;
     color: black;
 }
+.log img{
+    width: 0px;
+    height: 0px;
+    border-radius: 10px;
+}
 
     </style>
 </head>
@@ -160,11 +167,22 @@ a{
        <section id="centera">
         <div class="sidebar">
 
-       <img src="##" alt="profile" style="border-radius=20px" >
+       <img class="log" src="assets/log.png" alt="profile" height="25px
+       " style="border-radius=20px" >
        <h1>Username</h1>
+       <h4>Name</h4>
+       <h4>Email ID</h4>
+       <h4>Linkedin</h4>
+
         </div>
         <div class="sidebar">
+      <h1>Top Idea</h1><br>
+      <a href="">Idea1</a><br>
+      <a href="">Idea2</a><br>
+      <a href="">Idea3</a><br>
 
+      <a href="">Idea4</a><br>
+      <a href="">Idea5</a>
         </div>
          
        </section>
@@ -179,8 +197,8 @@ a{
                 <li><a href=""><i class="bi bi-pencil-square"></i>Write article</a></li>
                 </ul>
         </div>
-        <div id="feed">
-yjvl
+        <div class="feed">
+        <div id="feed" style="border:1px solid black"></div>
         </div>
        </section>
        <section id="centerc" >
