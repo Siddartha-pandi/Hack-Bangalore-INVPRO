@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <style>
+        /* styles.css */
+.notifications-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.notification {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+.notification:hover {
+    background-color: #f5f5f5;
+}
+
+.notification-content {
+    display: flex;
+    align-items: center;
+}
+
+.notification-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-text {
+    flex: 1;
+    font-size: 16px;
+}
+
+.notification-text strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.notification-text small {
+    font-size: 12px;
+    color: #999;
+    display: block;
+}
+
+.notification-new {
+    background-color: #f9fafb;
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    from { background-color: #f9fafb; }
+    to { background-color: #fff; }
+}
+
+    </style>
+</head>
+<body>
+    <div class="notifications-container">
+        <h1>Notifications</h1>
+        <div class="notification-list" id="notificationList">
+            <!-- Notifications will be added dynamically here -->
+        </div>
+    </div>
+    <script>
+        // script.js
+document.addEventListener("DOMContentLoaded", function () {
+    const notificationList = document.getElementById("notificationList");
+
+    // Sample notification data (replace with actual data)
+    const notifications = [
+        { type: "view", text: "<strong>Your post</strong> got 100 views.", time: "5 minutes ago", icon: "view_icon.png" },
+        { type: "like", text: "Someone liked <strong>your post</strong>.", time: "10 minutes ago", icon: "like_icon.png" },
+        { type: "message", text: "You have a new message from <strong>John Doe</strong>.", time: "1 hour ago", icon: "message_icon.png", isNew: true },
+        // Add more notifications as needed
+    ];
+
+    // Function to display notifications
+    function displayNotifications() {
+        notificationList.innerHTML = "";
+        notifications.forEach(notification => {
+            const notificationElement = document.createElement("div");
+            notificationElement.classList.add("notification");
+            if (notification.isNew) {
+                notificationElement.classList.add("notification-new");
+            }
+            const iconSrc = notification.icon;
+            const iconAlt = notification.type.charAt(0).toUpperCase() + notification.type.slice(1);
+            notificationElement.innerHTML = `
+                <div class="notification-content">
+                    <img src="${iconSrc}" alt="${iconAlt}" class="notification-icon">
+                    <div>
+                        <p class="notification-text">${notification.text}</p>
+                        <small>${notification.time}</small>
+                    </div>
+                </div>
+            `;
+            notificationList.appendChild(notificationElement);
+        });
+    }
+
+    // Initialize the application
+    displayNotifications();
+});
+
+    </script>
+</body>
+</html>
