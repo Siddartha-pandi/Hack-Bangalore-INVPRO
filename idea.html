@@ -45,20 +45,21 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: white;
     text-decoration: none;
 }
 
 main {
    justify-content: center;
-   background-color: gray;
+   background-color: white;
     height: 540px;
     display: flex;
+    color: black;
 }
 
 footer {
     background-color: #333;
-    color: #fff;
+    color: white;
     padding: 10px;
     text-align: center;
     display: flex;
@@ -74,6 +75,7 @@ footer {
 }
 #centerb{
     width: 50%;
+    color: black;
     padding: 15px;
     border:1px solid rgb(110, 102, 102)
     
@@ -82,15 +84,22 @@ footer {
     width: 25%;
 }
 #post{
-    border: 1px solid whitesmoke;
+    border: 1px solid gray;
     padding: 20px;
     border-radius: 4px;
    
 }
+#feed{
+    padding: 5px;
+    width: ;
+    height: 200px;
+    border:0.5 solid rgb(29, 7, 7);
+    border-radius: 5px;
+}
 #post input{
     width: 97%;
     padding: 10px;
-    
+color: black;
     border-radius: 20px;
     margin-bottom: 15px;
     justify-content: space-around;
@@ -102,19 +111,34 @@ footer {
     list-style-type: none;
  text-align: center;
  font-size: 20px;
-    color: #fff;
+    color:black;
     justify-content: space-around;
 }
 
 
 button{
     background-color: transparent;
+    
   
+}
+#centera{
+    padding: 10px;
+    
+}
+#centerc{
+    padding: 10px;
+}
+.sidebar{
+    padding: 20px;
+    border: 0.5px solid rgba(0, 0, 0, 0.41);
+    border-radius: 12px;
+    margin-bottom: 10px;
+    height:210px;
 }
 a{
     text-decoration: none;
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
     </style>
@@ -134,8 +158,15 @@ a{
 
     <main id="main">
        <section id="centera">
-        <h3>top Ideas</h3>
+        <div class="sidebar">
 
+       <img src="##" alt="profile" style="border-radius=20px" >
+       <h1>Username</h1>
+        </div>
+        <div class="sidebar">
+
+        </div>
+         
        </section>
     
        <section id="centerb">
@@ -148,11 +179,20 @@ a{
                 <li><a href=""><i class="bi bi-pencil-square"></i>Write article</a></li>
                 </ul>
         </div>
+        <div id="feed">
+yjvl
+        </div>
        </section>
-       <section id="centerc">
-            <div id="ad">
-                jnb
-            </div>
+       <section id="centerc" >
+        <div class="sidebar">
+
+            <img src="##" alt="advertisement" style="border-radius=20px" >
+            
+             </div>
+             <div class="sidebar">
+     
+             </div>
+              
        </section>
     </main>
 
